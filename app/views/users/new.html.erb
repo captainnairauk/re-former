@@ -1,1 +1,23 @@
 <h2>Create New User:</h2>
+
+<form accept-charset= "UTF-8" action="/users" method = "post">
+  <input type="hidden" name="authenticity_token">
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" name="user[email]" id="email">
+  </div>
+  
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" name="user[username]" id="username">
+  </div>
+  
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" name="user[password]" id="password">
+  </div>
+
+  <input name = "commit" type="submit" value="Submit!" data-disable-with="Submit!">
+
+</form>
