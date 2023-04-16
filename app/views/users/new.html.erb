@@ -1,5 +1,33 @@
 <h2>Create New User:</h2>
 
+<%= form_tag("/users") do  %>
+  <%= hidden_field_tag "authenticity_token" %>
+
+  <div>
+    <%= label_tag "email", "Email:" %>
+    <%= email_field_tag "email" %>
+  </div>
+
+  <div>
+    <%= label_tag "username", "Username:" %>
+    <%= text_field_tag "username" %>
+  </div>
+
+  <div>
+    <%= label_tag "password", "Password:" %>
+    <%= password_field_tag "password" %>
+  </div>
+
+  <%= submit_tag "Submit!"%>
+
+<% end %>
+
+
+
+<%
+=begin%>
+ <h2>Create New User:</h2>
+
 <form accept-charset= "UTF-8" action="/users" method = "post">
   <input type="hidden" name="authenticity_token">
 
@@ -20,4 +48,7 @@
 
   <input name = "commit" type="submit" value="Submit!" data-disable-with="Submit!">
 
-</form>
+</form> 
+<%
+=end%>
+
